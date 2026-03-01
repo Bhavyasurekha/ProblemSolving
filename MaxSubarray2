@@ -1,0 +1,19 @@
+import java.util.*;
+public class MaxSubarray2 {
+    public static void main(String[]args){
+        int arr[]={1,-2,6,-1,3};
+        int p[]=new int[arr.length];
+        p[0]=arr[0];
+        for(int i=1;i<arr.length;i++){
+            p[i]=p[i-1]+arr[i];
+        }
+        int maxi=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                maxi=Math.max(arr[j]-arr[i],maxi);
+            }
+        }
+        System.out.print(maxi);
+    }
+    
+}
