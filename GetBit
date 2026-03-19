@@ -1,0 +1,12 @@
+class Main {
+    public static void main(String[] args) {
+        int i=2;
+        int bitMask=1<<i;
+        int n =12;
+        if((n & bitMask)==0){
+             System.out.print("0");
+        }else{
+            System.out.print("1");
+        }
+    }
+}
